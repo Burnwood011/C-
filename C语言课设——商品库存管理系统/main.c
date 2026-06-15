@@ -25,7 +25,7 @@ void showmenu() {
 //main函数从此处开始
 int main() {
 	int choose=0;
-
+	char c;//后面用来清除输入缓冲区的字符
 	do {
 		system("cls");
 		showmenu();
@@ -68,14 +68,15 @@ int main() {
 				//模块五
 				 SearchPro(astPro);
 				 printf("查询成功！\n");
-				sleep(1);
+				 printf("按任意键继续...\n");
+				 _getch();
 				break;
 			case 6:
 				printf("显示所有商品\n");
 				//模块六
 				 ShowPro(astPro);
-				printf("显示成功！\n");
-				sleep(1);
+				 printf("按任意键继续...\n");
+				 _getch();
 				break;
 			case 7:
 				printf("退出系统成功，再会\n");

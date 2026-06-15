@@ -3,7 +3,7 @@
 
 #define CRT_SECURE_NO_WARNINGS
 #define PRODUCT_LEN sizeof(struct Product)
-#define FORMAT "%-8d%-15s%-15s%-15s%-12.1lf%-8d\n"
+#define FORMAT "%-8d%-16s%-15s%-15s%-12.1lf%-8d\n"
 #define DATA astPro[i].id, astPro[i].name, astPro[i].Producer, astPro[i].Date, astPro[i].price, astPro[i].Amount
 
 typedef struct Product

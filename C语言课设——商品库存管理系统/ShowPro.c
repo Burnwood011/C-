@@ -12,7 +12,7 @@ void ShowPro(struct Product astPro[])
 		return;
 	}
 
-	printf("\n商品ID\t商品名称\t生产商\t生产日期\t单价\t数量\n");
+	printf("\n商品ID\t商品名称\t生产商\t      生产日期\t      单价\t  数量\n");
 	for (i = 0; i < count; i++) {
 		printf(FORMAT, DATA);
 	}
