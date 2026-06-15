@@ -18,5 +18,37 @@
     <ClCompile Include="main.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="DeletePro.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="InputPro.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ModifyPro.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputPro.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="product_common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchPro.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ShowPro.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="util.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="product_common.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

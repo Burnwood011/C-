@@ -2,36 +2,85 @@
 #include <stdlib.h>
 #include <conio.h>
 
-#define CRT_SECURE_NO_WARNINGS
-#define PRODUCT_LEN sizeof(struct Product)
-#define FORMAT "% -8d% -15s% -15s% -15s% -12.1lf% -18\n"
-#define DATA astPro[i].id, astPro[i].name, astPro[i].Producer, astPro[i].Date, astPro[i].price, astPro[i].Amount
-typedef struct Product
-{
-	int id;
-	char name[15];
-	char Producer[15];
-	char Date[15];
-	double price;
-	int Amount;
-} Product;
+#include "util.h"
+
 struct Product astPro[100];
 
-//showmenuå‡½æ•°æ˜¾ç¤ºåŠŸèƒ½æ¨¡å—
+//showmen
 void showmenu() {
-	printf("**********å•†å“ä¿¡æ¯ç®¡ç†ç³»ç»Ÿ**********\n");
-	printf("1.æ·»åŠ å•†å“ä¿¡æ¯\n");
-	printf("2.æ˜¾ç¤ºæ‰€æœ‰å•†å“ä¿¡æ¯\n");
-	printf("3.æŸ¥è¯¢å•†å“ä¿¡æ¯\n");
-	printf("4.ä¿®æ”¹å•†å“ä¿¡æ¯\n");
-	printf("5.åˆ é™¤å•†å“ä¿¡æ¯\n");
-	printf("6.æ˜¾ç¤ºå•†å“ä¿¡æ¯\n");
-	printf("7.é€€å‡ºç³»ç»Ÿ\n");
+	printf("----------»¶Ó­Ê¹ÓÃÉÌÆ·¹ÜÀíÏµÍ³----------\n");
+	printf("1.ÉÌÆ·Èë¿â\n");
+	printf("2.ÉÌÆ·³ö¿â\n");
+	printf("3.É¾³ıÉÌÆ·\n");
+	printf("4.ĞŞ¸ÄÉÌÆ·\n");
+	printf("5.²éÑ¯ÉÌÆ·\n");
+	printf("6.ÏÔÊ¾ËùÓĞÉÌÆ·\n");
+	printf("7.ÍË³öÏµÍ³\n");
+	printf("---------------------------------------\n");
+
 
 }
 
 
-//mainå‡½æ•°ä»æ­¤å¼€å§‹
+//mainº¯Êı´Ó´Ë´¦¿ªÊ¼
 int main() {
+	int choose=0;
 
+	do {
+		system("cls");
+		showmenu();
+		scanf("%d", &choose);
+		if (choose < 1 || choose > 7) {
+			printf("ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë£º\n");
+		}
+		else {
+			switch (choose) {
+			case 1:
+				printf("ÉÌÆ·Èë¿â\n");
+				//Ä£¿éÒ»
+				InputPro(astPro);
+				printf("Èë¿â³É¹¦£¡\n");
+				sleep(1);
+				break;
+			case 2:
+				printf("ÉÌÆ·³ö¿â\n");
+				//Ä£¿é¶ş
+				OutputPro(astPro);
+				printf("³ö¿â³É¹¦£¡\n");
+				sleep(1);
+				break;
+			case 3:
+				printf("É¾³ıÉÌÆ·\n");
+				//Ä£¿éÈı
+				DeletePro(astPro);
+				printf("É¾³ı³É¹¦£¡\n");
+				sleep(1);
+				break;
+			case 4:
+				printf("ĞŞ¸ÄÉÌÆ·\n");
+				//Ä£¿éËÄ
+				 ModifyPro(astPro);
+				printf("ĞŞ¸Ä³É¹¦£¡\n");
+				sleep(1);
+				break;
+			case 5:
+				printf("²éÑ¯ÉÌÆ·\n");
+				//Ä£¿éÎå
+				 SearchPro(astPro);
+				 printf("²éÑ¯³É¹¦£¡\n");
+				sleep(1);
+				break;
+			case 6:
+				printf("ÏÔÊ¾ËùÓĞÉÌÆ·\n");
+				//Ä£¿éÁù
+				 ShowPro(astPro);
+				printf("ÏÔÊ¾³É¹¦£¡\n");
+				sleep(1);
+				break;
+			case 7:
+				printf("ÍË³öÏµÍ³³É¹¦£¬ÔÙ»á\n");
+				return 0;
+			}
+		}
+	}while (1);
 }
